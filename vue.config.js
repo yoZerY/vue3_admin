@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const path = require('path')
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -29,5 +30,14 @@ module.exports = defineConfig({
         symbolId: 'icon-[name]'
       })
       .end()
+  },
+  configureWebpack: {
+    resolve: {
+      fallback: {
+        fs: false,
+        crypto: require.resolve('crypto-browserify')
+      }
+    },
+    plugins: [new NodePolyfillPlugin()]
   }
 })
