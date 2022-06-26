@@ -5,6 +5,7 @@
         align="center"
         prop="id"
         label="id"
+        width="50"
         show-overflow-tooltip
       />
       <el-table-column

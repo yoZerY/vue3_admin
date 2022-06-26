@@ -4,6 +4,7 @@
       <el-table-column
         align="center"
         prop="id"
+        width="50"
         label="id"
         show-overflow-tooltip
       />
