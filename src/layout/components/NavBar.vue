@@ -2,6 +2,7 @@
   <div class="navbar">
     <div class="left-menu">
       <Hamburger></Hamburger>
+      <Breadcrumb></Breadcrumb>
     </div>
     <div class="right-menu">
       <el-dropdown>
@@ -21,6 +22,7 @@
 import { computed } from 'vue'
 import { useStore } from 'vuex'
 import Hamburger from '@/components/Hamburger/index.vue'
+import Breadcrumb from '@/components/Breadcrumb/index.vue'
 const store = useStore()
 const userInfo = computed(() => store.getters.userInfo)
 
@@ -40,6 +42,10 @@ const logOut = () => {
   justify-content: space-between;
   .avatar {
     cursor: pointer;
+  }
+  .left-menu {
+    display: flex;
+    align-items: center;
   }
   .right-menu {
     padding-right: 16px;

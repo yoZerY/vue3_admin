@@ -1,13 +1,7 @@
 <template>
   <div v-loading="loading">
     <el-table :data="tableData" style="width: 100%">
-      <el-table-column
-        align="center"
-        prop="id"
-        width="50"
-        label="id"
-        show-overflow-tooltip
-      />
+      <el-table-column   align="center" type="index" width="50" />
       <el-table-column
         align="center"
         prop="title"

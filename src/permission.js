@@ -10,9 +10,7 @@ router.beforeEach(async (to, from, next) => {
       next('/')
     } else {
       if (!store.getters.hasUserInfo) {
-        const result = await store.dispatch('user/getUserInfo')
-
-        console.log('result', result)
+        await store.dispatch('user/getUserInfo')
 
         return next(to.path)
       }

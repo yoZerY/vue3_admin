@@ -11,6 +11,7 @@
     <div class="main-container">
       <div class="fixed-header">
         <Navbar></Navbar>
+        <TagsView></TagsView>
       </div>
       <AppMain></AppMain>
     </div>
@@ -18,7 +19,7 @@
 </template>
 <script setup>
 import { computed } from 'vue'
-
+import TagsView from '@/components/tagsView/index.vue'
 import SiderBar from './components/SideBar/index.vue'
 import AppMain from './components/AppMain.vue'
 import Navbar from './components/NavBar.vue'
