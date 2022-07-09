@@ -1,6 +1,5 @@
 import md5 from 'md5'
 import router from '@/router'
-import { ElLoading } from 'element-plus'
 
 import { setTimeStamp } from '@/utils/auth'
 import { loginReq, getUserInfo } from '@/api/sys'
@@ -40,13 +39,8 @@ export default {
       })
     },
     async getUserInfo({ commit }) {
-      const loading = ElLoading.service({
-        lock: true,
-        text: 'Loading'
-      })
       const res = await getUserInfo()
       commit('setUserInfo', res)
-      loading.close()
       return res
     },
     // 退出登录
